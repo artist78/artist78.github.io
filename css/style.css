@@ -250,11 +250,11 @@ hr.small {
 
 /* Blur Effect */
 .image {
-   background: url('../img/ny-blur.jpg') no-repeat center center;
+   background: url('../img/barnsky.jpg') no-repeat center center;
 }
 
 .blurimage {
-   background: #1F1F1F url('../img/ny.jpg') no-repeat center center;
+   background: #1F1F1F url('../img/barnsky.jpg') no-repeat center center;
 }
 
 .blurImg {
@@ -301,11 +301,11 @@ hr.small {
 
 /* Full Width Image */
 #workimage {
-    background: #1F1F1F url(../img/code.png) no-repeat center center;
+    background: #1F1F1F url(../img/sunset2.img) no-repeat center center;
 }
 
 #projectimage {
-    background: #1F1F1F url(../img/code.png) no-repeat center center;
+    background: #1F1F1F url(../img/sunset2.img) no-repeat center center;
 }
 
 #workimage, #projectimage {
