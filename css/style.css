@@ -301,11 +301,11 @@ hr.small {
 
 /* Full Width Image */
 #workimage {
-    background: #1F1F1F url(../img/sunset2.img) no-repeat center center;
+    background: #1F1F1F url(../img/sunset2.jpg) no-repeat center center;
 }
 
 #projectimage {
-    background: #1F1F1F url(../img/sunset2.img) no-repeat center center;
+    background: #1F1F1F url(../img/sunset2.jpg) no-repeat center center;
 }
 
 #workimage, #projectimage {
