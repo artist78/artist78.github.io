@@ -47,25 +47,27 @@ header .fa:hover, .projects .fa-angle-double-up:hover {
     color: rgb(130,130,130);
 }
 
-/* Summary */
-.summary {
-    background-color: white;
+/* About Us */
+.aboutus {
+	background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.5);
     padding: 50px 0;
 }
 
-.summary p {
+.aboutus p {
     font-size: 20px;
     font-weight: 500;
 }
 
-/* Work */
-.work p {
+/* Critters */
+.critters p {
     font-size: 20px;
     font-weight: 500;
 }
 
-.work{
-    background-color: rgb(56,56,56);
+.critters{
+	background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .9);
     padding: 50px 0;
     color: white;
 }
@@ -77,35 +79,35 @@ header .fa:hover, .projects .fa-angle-double-up:hover {
 }
 
 .projects {
-    background-color: rgb(56,56,56);
+	background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.9);
     padding: 50px 0;
-    color: white;
-}
-
-/* Resume */
-#resume p {
-    font-size: 50px;
-    color: white;
-}
-
-#resume {
-    background-color: rgb(77,77,79);
-}
-
-#resume .fa {
-    color: rgb(130,130,130);
-}
-
-#resume .fa:hover {
     color: white;
 }
 
 /* Footer */
-footer {
-    background-color: white;
-    padding: 50px 0;
+#footerimage {
+    background: #1F1F1F url(../img/footer.png) no-repeat center center;
 }
 
+#footerimage {
+   background-size: cover !important;
+   -webkit-background-size: cover !important;
+   background-attachment: fixed;
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+}
+
+#footerimage .text-container {
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+ #footerimage p, #footerimage .fa {
+    font-size: 30px;
+    color: black;
+}
 /* General Style */
 img {
     background-color: #fff;
@@ -300,15 +302,15 @@ hr.small {
 }
 
 /* Full Width Image */
-#workimage {
-    background: #1F1F1F url(../img/sunset2.jpg) no-repeat center center;
+#critterimage {
+    background: #1F1F1F url(../img/sunset1.jpg) no-repeat center center;
 }
 
 #projectimage {
-    background: #1F1F1F url(../img/sunset2.jpg) no-repeat center center;
+    background: #1F1F1F url(../img/blueberries.jpg) no-repeat center center;
 }
 
-#workimage, #projectimage {
+#critterimage, #projectimage {
    background-size: cover !important;
    -webkit-background-size: cover !important;
    background-attachment: fixed;
@@ -317,15 +319,17 @@ hr.small {
    overflow: hidden;
 }
 
-#workimage .text-container, #projectimage .text-container, #resume .text-container {
+#critterimage .text-container, #projectimage .text-container {
    padding-top: 60px;
    padding-bottom: 60px;
 }
 
-#workimage p, #projectimage p, #workimage .fa, #projectimage .fa {
+#critterimage p, #projectimage p, #critterimage .fa, #projectimage .fa {
     font-size: 50px;
     color: white;
 }
+
+
 
 /* Back to top */
 .back-to-top {
