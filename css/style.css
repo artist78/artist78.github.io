@@ -1,350 +1,446 @@
-/* Body */
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Cate Rusthoven">
 
-.text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
+    <title>Wonderland Acres Hobby Farm</title>
 
-.text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 4.5em;
-    font-weight: 700;
-}
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-/* Header */
-.header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    padding: 50px 0;
-}
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
 
-header h1, h3 {
-    color: white;
-}
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-header .fa, .projects .fa-angle-double-up {
-    color: rgb(170,172,179);
-}
+    <!-- Favicons ***Add logo for display*** -->
+    <link rel="shortcut icon" href="img/favicon.png" >
+</head>
 
-header .fa:hover, .projects .fa-angle-double-up:hover {
-    color: rgb(130,130,130);
-}
+<body>
+    <!-- Navigation begins -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="" onclick=$("#menu-close").click();>Welcome</a>
+            </li>
+            <li>
+                <a href="#home" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#AboutUs" onclick=$("#menu-close").click();>About Us</a>
+            </li>
+            <li>
+                <a href="#Critters" onclick=$("#menu-close").click();>Wonderland Critters</a>
+            </li>
+            <li>
+                <a href="#projects" onclick=$("#menu-close").click();>Projects</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navigation ends -->
 
-/* About Us */
-.aboutus {
-	background: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.5);
-    padding: 50px 0;
-}
+    <!-- Home begins -->
+    <header id="home" class="header">
+        <div class="blurImg">
+            <div class="image"></div>
+            <div class="blur blurimage"></div>
+        </div>
 
-.aboutus p {
-    font-size: 20px;
-    font-weight: 500;
-}
+        <div class="text-vertical-center">
+            <img class="img-responsive img-circle center-block grow" src="img/mt.jpg" width="200px" alt="">
+            <h1>Wonderland Acres Hobby Farm</h1>
+            <h3>What a strange little farm...</h3>
+            <br>
+            <a target="_blank" href="http://artist78/artist78.github.io/"><span class="fa fa-github fa-4x" aria-hidden="true"></span></a>
+            <a target="_blank" href="https://www.facebook.com/RRrabbity/"><span class="fa fa-facebook-official fa-4x" aria-hidden="true"></span></a>
+            <br>
+            <br>
+            <br>
+            <a href="#AboutUs" class="btn page-scroll">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
+        </div>
+    </header>
+    <!-- Home ends -->
+    
+    <!-- About Us begins -->
+    <section id="AboutUs" class="aboutus">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                    <h2>About Us</h2>
+                    <hr>
+                    <p class="lead">
+                    Write about us here.
+                    </p>
 
-/* Critters */
-.critters p {
-    font-size: 20px;
-    font-weight: 500;
-}
+                    <p class="lead">
+                     And a little more about us here.
+                    </p>
 
-.critters{
-	background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, .9);
-    padding: 50px 0;
-    color: white;
-}
+                    <p class="lead">
+                     And possibly some more about us here.
+                    </p>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- About Us ends -->
 
-/* Projects */
-.projects p {
-    font-size: 20px;
-    font-weight: 500;
-}
+    <!-- The Wonderland Critters begins-->
+    <section id="critterimage" class="content-section text-center">
+        <div class="text-container">
+            <p><strong>The Wonderland Critters</strong></p>
+        </div>
+    </section>
+    <!-- The Wonderland Critters ends -->
 
-.projects {
-	background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.9);
-    padding: 50px 0;
-    color: white;
-}
+    <!-- The Wonderland Critter begins -->
+<section id="critterimage" class="content-section text-center">
+    <section id="Critters" class="critters">
+        <div class="container">
+            <div class="row" id="workheading">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                <h2>Critters</h2>
+                <hr>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+			<br>
+			<br>
+			
 
-/* Footer */
-#footerimage {
-    background: #1F1F1F url(../img/footer.png) no-repeat center center;
-}
+            <div class="row" id="Guardians">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                    <a target="_blank" href="http://example.com/"> <!-- ***Add page for Dogs -->
+                    <img class="img-responsive img-circle center-block grow" src="img/default-company.jpg" width="160px" alt=""></a>
+                    <h2><span>Current Guardians</span><br>
+                    <small>Doesha</small><br>
+                    <small>Cheeba</small><br>                    
+                    <small>Ryker</small><br>
+                    <small>Azrona</small>
+                    </h2>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+			
+			<br>
+			<br>
 
-#footerimage {
-   background-size: cover !important;
-   -webkit-background-size: cover !important;
-   background-attachment: fixed;
-   position: relative;
-   width: 100%;
-   overflow: hidden;
-}
+            <div class="row" id="Mouseketeers">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                    <a target="_blank" href="http://example.com/">  <!-- ***Add page for Cats -->
+                    <img class="img-responsive img-circle center-block grow" src="img/default-company.jpg" width="160px" alt=""></a>
+                    <h2><span>Current Mouseketeers</span><br>
+                    <small>Mouse</small><br>
+                    <small>Foofers "Jean"</small><br>
+                    <small>Fats "Prim"</small>
+                    </h2>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            
+            <br>
+            <br>
+            
+             <div class="row" id="Bacon Seeds">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                    <a target="_blank" href="http://example.com/"> <!-- ***Add page for Pigs -->
+                    <img class="img-responsive img-circle center-block grow" src="img/default-company.jpg" width="160px" alt=""></a>
+                    <h2><span>Bacon Seeds</span><br>
+                    <small>Paul</small><br>
+                    <small>Pig Junior</small><br>                    
+                    <small>Miss Giggles</small>
+                    </h2>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <br>
+			<br>
+            <div class="row" id="Goatie Goats">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                    <a target="_blank" href="http://example.com/"> <!-- ***Add page for goats -->
+                    <img class="img-responsive img-circle center-block grow" src="img/default-company.jpg" width="160px" alt=""></a>
+                    <h2><span>Goatie Goats</span><br>
+                    <small>Niya</small><br>
+                    <small>Litte "Sweetie Flowers"</small>
+                    </h2>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            
+            <br>
+            <br>
+            
+            <div class="row" id="Down the Rabbit Hole">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                    <a target="_blank" href="http://example.com/"> <!-- ***Add page for Rabbits -->
+                    <img class="img-responsive img-circle center-block grow" src="img/default-company.jpg" width="160px" alt=""></a>
+                    <h2><span>Down the Rabbit Hole</span><br>
+                    <span>Bucks</span><br>
+                    <small>Itzli</small><br>
+                    <small>Miles</small><br><br>
+                    <span>Does</span><br>
+                    <small>Cloe</small><br>
+                    <small>Miss FussBudget</small><br>
+                    <small>Claudette</small><br>
+                    <small>Kyla</small><br>
+                    <small>Odette</small><br>
+                    <small>Charlotte</small><br>
+                    <small>Dila</small>
+                    </h2>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+			<br>
+			<br>
+                
+           <div class="row" id="Fowl Friends">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                    <a target="_blank" href="http://example.com/"> <!-- ***Add page for Fowl -->
+                    <img class="img-responsive img-circle center-block grow" src="img/default-company.jpg" width="160px" alt=""></a>
+                    <h2><span>Fowl Friends</span><br>
+                    <span>Muscovies</span><br>
+                    <small>BatDuck III</small><br>
+                    <small>Elektra</small><br>
+                    <small>Mera</small><br>
+                    <small>Kaydos</small><br>
+                    <small>Mystique</small><br><br>
+                    <span>Chickens</span><br>
+                    <small>Gimpy</small><br>
+                    <small>Hawkeye</small><br>
+                    <small>Baldy</small><br>
+                    <small>Beaker "the Tweaker"</small><br>
+                    <small>Bunson II</small><br>
+                    <small>Blue</small><br>
+                    <small>Delta</small><br>
+                    <small>Charlie</small><br>
+                    <small>Echo</small><br>
+                    <small>Gabby</small><br>
+                    <small>Star</small>
+                    </h2>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
 
-#footerimage .text-container {
-   padding-top: 10px;
-   padding-bottom: 10px;
-}
+        </div>
+        <!-- /.container -->
+    </section>
+</section>
+    <!-- Critters ends -->
 
- #footerimage p, #footerimage .fa {
-    font-size: 30px;
-    color: black;
-}
-/* General Style */
-img {
-    background-color: #fff;
-    padding: 4px;
-}
+    <!-- Projects Image begins-->
+    <section id="projectimage" class="content-section text-center">
+        <div class="text-container">
+            <p><strong>Under Construction</strong></p>
+        </div>
+    </section>
+    <!-- Projects Image ends -->
 
-.htmllogo {
-    background-color: rgb(36, 36, 36);
-}
+    <!-- Projects begins -->
+<section id="projectimage" class="content-section text-center">
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="row" id="projectsheading">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center">
+                <h2>Upcoming and Current Projects</h2>
+                <hr>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+            <br>
 
-/* Custom Button Styles */
-.btn-dark {
-    border-radius: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.4);
-}
+            <div class="row">
+              <div class="col-lg-2 text-center">
+              </div>
 
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-}
+              <div class="col-lg-4 text-center">
+                  <a target="_blank" href="http://example.com/">
+                  <img class="img-responsive img-circle center-block grow" src="img/beansprout.jpg" width="150px" alt=""></a>
+                  <h2><span>Project Name</span><br>
+                  <small>Duration</small><br>
+                  <small><a target="_blank" href="https://github.com/">Example</a></small>
+                  </h2>
+                  <p class="lead">
+                    WIP AREA
+                  </p>
+              </div>
 
-.btn-light {
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-}
+              <div class="col-lg-4 text-center">
+                  <a target="_blank" href="http://example.com/">
+                  <img class="img-responsive img-circle center-block grow" src="img/apples.jpg" width="150px" alt=""></a>
+                  <h2><span>Project Name</span><br>
+                  <small>Duration</small><br>
+                  <small><a target="_blank" href="https://github.com/">Example</a></small>
+                  </h2>
+                  <p class="lead">
+                    WIP AREA
+                  </p>
+              </div>
 
-.btn-light:hover,
-.btn-light:focus,
-.btn-light:active {
-    color: #333;
-    background-color: rgba(255,255,255,0.8);
-}
+              <div class="col-lg-2 text-center">
+              </div>
+            </div>
 
-/* Custom Horizontal Rule */
-hr.small {
-    max-width: 100px;
-}
+            <br>
+            <br>
 
-/* Side Menu*/
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    transform: translateX(250px);
-    overflow-y: auto;
-    background: #222;
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-    -ms-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-}
+            </div>
+        </div>
+        <!-- /.container -->
+	</section>
+</section>
+	
+    <!-- Projects ends -->
 
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+	<!-- Footer Image Begins -->
+	    <footer id="footerimage" class="text-center">
+        <div class="text-container">
+           <span><p>Copyright &copy; 2018 Wonderland Acres</span></p>
+        </div>
+		</footer>
+	<!-- Footer Image Ends -->
 
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-}
+    <!-- Bact to top begins -->
+    <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <!-- Bact to top ends -->
 
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999;
-}
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
+    <!-- Custom Theme JavaScript -->
+    <script>
+	
+	
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
+    </script>
 
-.sidebar-nav > .sidebar-brand {
-    height: 55px;
-    font-size: 18px;
-    line-height: 55px;
-}
+    <!-- Blur Function -->
+    <script type="text/javascript">
+    (function () {
+        $(window).scroll(function () {
+            var oVal;
+            oVal = $(window).scrollTop() / 500;
+            return $('.blur').css('opacity', oVal);
+        });
+    }.call(this));
+    </script>
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-#menu-toggle {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
-}
-
-#menu-close {
-    border-radius: 5px;
-    background-color: rgb(34,34,34);
-    color: white;
-    border-style: solid;
-    border-color: white;
-}
-
-#sidebar-wrapper.active {
-    right: 250px;
-    width: 250px;
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-    -ms-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-}
-
-.toggle {
-    margin: 5px 5px 0 0;
-}
-
-/* Blur Effect */
-.image {
-   background: url('../img/barnsky.jpg') no-repeat center center;
-}
-
-.blurimage {
-   background: #1F1F1F url('../img/barnsky.jpg') no-repeat center center;
-}
-
-.blurImg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -9999;
-    top: 0;
-    left: 0;
-}
-.blurImg > div {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.blur {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-
-/* Transition Effect */
-.grow {
-    transition: all .2s ease-in-out;
-}
-
-.grow:hover {
-    transform: scale(1.1);
-}
-
-/* Scroll Button */
-.page-scroll {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border-radius: 100% !important;
-  font-size: 40px;
-  background: transparent;
-}
-
-/* Full Width Image */
-#critterimage {
-    background: #1F1F1F url(../img/sunset1.jpg) no-repeat center center;
-}
-
-#projectimage {
-    background: #1F1F1F url(../img/blueberries.jpg) no-repeat center center;
-}
-
-#critterimage, #projectimage {
-   background-size: cover !important;
-   -webkit-background-size: cover !important;
-   background-attachment: fixed;
-   position: relative;
-   width: 100%;
-   overflow: hidden;
-}
-
-#critterimage .text-container, #projectimage .text-container {
-   padding-top: 60px;
-   padding-bottom: 60px;
-}
-
-#critterimage p, #projectimage p, #critterimage .fa, #projectimage .fa {
-    font-size: 50px;
-    color: white;
-}
-
-
-
-/* Back to top */
-.back-to-top {
-    cursor: pointer;
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    display:none;
-    text-decoration: none;
-    border-radius: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.back-to-top:hover {
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-}
+    <!-- Back to top -->
+    <script>
+    $(document).ready(function(){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        $('#back-to-top').tooltip('show');
+    });
+    </script>
+</body>
+</html>
