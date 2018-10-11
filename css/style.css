@@ -348,3 +348,74 @@ hr.small {
     color: #fff;
     background-color: rgba(0,0,0,0.7);
 }
+
+
+/* Rabbits Photo Flipper */
+.card {
+  width: 348px;
+  height: 500px;
+  perspective: 900px;
+}
+article {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #CCC;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 3px;
+  font-family: helvetica, arial, sans-serif;
+}
+
+article.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 15px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.front {
+}
+
+.back {
+  background-color: #0000;
+  transform: rotateY(180deg);
+}
+
+.name {
+  font-style: normal;
+  color: #68bbe5;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.frontphoto {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../img/itzli.jpg);
+}
+
+.backphoto {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center center;
+  background-image: url(../img/MFB.jpg);
+}
+
+
