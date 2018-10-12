@@ -1,20 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>flip photo</title>
-  
-  
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Just+Another+Hand''>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Cate Rusthoven">
 
-      <link rel="stylesheet" href="css/style.css">
+    <title>Rabbit Hole</title>
 
-  
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Just+Another+Hand'>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.png" >
 </head>
 
 <body>
+    <!-- Navigation begins -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="" onclick=$("#menu-close").click();>Welcome</a>
+            </li>
+            <li>
+                <a href="#home" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#AboutUs" onclick=$("#menu-close").click();>About Us</a>
+            </li>
+            <li>
+                <a href="#Critters" onclick=$("#menu-close").click();>Wonderland Critters</a>
+            </li>
+            <li>
+                <a href="#projects" onclick=$("#menu-close").click();>Projects</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navigation ends -->
+	
+	
+<!--Photo Flipper -->
+
   <div id='Card' class='card'>
   <article id='flipper' class=''>
     <section class='front'>
@@ -22,12 +62,133 @@
       <div class='frontphoto'></div>
       </section>
     <section class='back'>
-    <address class='name'>Miss FussBudget</address>
+	<address class='name'>Miss FussBudget</address>
        <div class='backphoto'></div>    
     </section>
   </article>
-</div>
       <script  src="js/index.js"></script>
-</body>
 
+<!--Photo Flipper Ends -->
+
+    <!-- Bact to top begins -->
+    <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <!-- Bact to top ends -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+	
+	
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
+    </script>
+
+    <!-- Blur Function -->
+    <script type="text/javascript">
+    (function () {
+        $(window).scroll(function () {
+            var oVal;
+            oVal = $(window).scrollTop() / 500;
+            return $('.blur').css('opacity', oVal);
+        });
+    }.call(this));
+    </script>
+
+    <!-- Back to top -->
+    <script>
+    $(document).ready(function(){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        $('#back-to-top').tooltip('show');
+    });
+    </script>
+</body>
 </html>
+
+
